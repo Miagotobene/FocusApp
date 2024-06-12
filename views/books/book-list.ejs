@@ -1,37 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-
-  <div class="navigation"><%- include('nav') %></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="navigation"><%- include('nav') %></div>
+    <div class="container">
+      <h1>Book Lists</h1>
       <div class="container">
-        <h1>Book Lists</h1>
-        <div class="container">
-          <% if (data.length==0) { %>
-            <h4 class="text-muted">There are no book in the list</h4>
-          <%= } %>
-          <div class="row">
-        <% data.forEach(book => { %>
-         
-              <div class="col">
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title"><%= book.title %></h5>
-                    <h6 class="card-text"><%= book.description %></h6>
-                    <h6 class="card-text"><%= book.author %></h6>
-                    <a href="/api/books/delete/<%= book.id %>" class="card-link link-danger">Delete</a>
-                  </div>
-                </div>
+        <% if (data.length==0) { %>
+        <h4 class="text-muted">There are no book in the list</h4>
+        <% } %>
+        <div class="row">
+          <% data.forEach((book) => { %>
+
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title"><%= book.title %></h5>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  <%= book.description %>
+                </h6>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  <%= book.author %>
+                </h6>
+                <a
+                  href="/api/books/delete/<%= book.id %>"
+                  class="card-link link-danger"
+                  >Delete</a
+                >
               </div>
-          
-        
-      <%  }); %>
+            </div>
+          </div>
+
+          <% }) %>
+        </div>
+      </div>
     </div>
-  </div>
-  
-</body>
+  </body>
 </html>
