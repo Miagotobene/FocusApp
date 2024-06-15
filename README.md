@@ -21,3 +21,9 @@ Project 2: Task Manager </BR>
 </br> userid, name, type (book, article ?), status (started, in progress, done?), score, author
 * Timer app
 </br> userid, tasks logged, focus hours, day streaks
+
+## <br /> <ins> __Installation Instructions__ </ins>
+Follow the steps below to set up this app locally
+1. Fork and Clone the repository
+```
+```
