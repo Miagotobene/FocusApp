@@ -4,6 +4,10 @@ const Schema = mongoose.Schema;
 
 // Create the book schema here
 const BookSchema = new Schema({
+    user: {
+        type: Schema.ObjectId,
+        ref: 'User'
+      },
     title: {
         type: String,
         required: true
