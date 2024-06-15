@@ -37,4 +37,9 @@ npm install
 MONGODB_URI=your_mongodb_connection_string
 SECRET_KEY=your_secret_key
 ```
-4. Run app by typing "npm start" in your terminal and open your browser to "http://localhost:4000"
+4. Run app by typing
+``` npm start```
+Then open your browser to 
+```
+http://localhost:4000
+```
