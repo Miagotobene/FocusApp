@@ -26,4 +26,15 @@ Project 2: Task Manager </BR>
 Follow the steps below to set up this app locally
 1. Fork and Clone the repository
 ```
+https://github.com/Miagotobene/FocusApp.git
 ```
+2. Navigate to the project directory and install dependencies
+```
+npm install
+```
+3. Create a .env file and add your environment variables to it
+```
+MONGODB_URI=your_mongodb_connection_string
+SECRET_KEY=your_secret_key
+```
+4. Run app by typing "npm start" in your terminal and open your browser to "http://localhost:4000"
